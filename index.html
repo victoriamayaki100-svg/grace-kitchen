@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Authentic Nigerian food in Kerry. Jollof rice, soups, small chops and cakes. Order on WhatsApp.">
+  <title>Grace's Kitchen | Nigerian Food in Kerry</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    [id] {
+      scroll-margin-top: 60px;
+    }
+    body {
+      background-color: #fff8ee;
+      background-image: linear-gradient(rgba(255,248,238,0.88), rgba(255,248,238,0.88)), url('background.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+    }
+    .nav {
+      background-color: #4f0811;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      padding: 8px 5px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .nav a {
+      color: #ffc72c;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+      padding: 6px 10px;
+    }
+    .top {
+      background-color: #7a0c1a;
+      padding: 50px 20px;
+    }
+    .top h1 {
+      color: #ffc72c;
+      margin: 0 0 10px 0;
+    }
+    .top p {
+      color: white;
+      font-size: 20px;
+      margin: 8px 0;
+    }
+    .hero {
+      display: block;
+      width: 100%;
+      max-width: 450px;
+      border-radius: 12px;
+      margin: 20px auto 0 auto;
+    }
+    .order-btn {
+      display: inline-block;
+      background-color: #25d366;
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+      padding: 15px 30px;
+      border-radius: 30px;
+      text-decoration: none;
+      margin-top: 20px;
+    }
+    h2 {
+      color: #7a0c1a;
+      margin-top: 40px;
+    }
+    .note {
+      color: #b8860b;
+      font-weight: bold;
+      font-size: 20px;
+      margin: 5px 20px 15px 20px;
+    }
+    .allergy {
+      color: #7a0c1a;
+      font-size: 16px;
+      margin: 5px 20px 15px 20px;
+    }
+    .dish {
+      background-color: white;
+      border-radius: 12px;
+      padding: 15px;
+      margin: 15px auto;
+      max-width: 400px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    .dish img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+    .dish h3 {
+      color: #7a0c1a;
+      margin: 0 0 8px 0;
+    }
+    .dish p {
+      color: #444;
+      font-size: 17px;
+      margin: 4px 0;
+    }
+    .dish .price {
+      color: #b8860b;
+      font-weight: bold;
+      font-size: 19px;
+    }
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      max-width: 450px;
+      margin: 15px auto;
+      padding: 0 20px;
+    }
+    .chips span {
+      background-color: white;
+      color: #7a0c1a;
+      font-weight: bold;
+      font-size: 17px;
+      border: 2px solid #ffc72c;
+      border-radius: 20px;
+      padding: 8px 16px;
+    }
+    .allergy-box {
+      background-color: #fff0c2;
+      border: 2px solid #ffc72c;
+      border-radius: 12px;
+      max-width: 400px;
+      margin: 40px auto 0 auto;
+      padding: 15px 20px;
+    }
+    .allergy-box h2 {
+      margin: 0 0 10px 0;
+    }
+    .allergy-box p {
+      color: #444;
+      font-size: 17px;
+      line-height: 1.5;
+      margin: 8px 0;
+    }
+    .about {
+      max-width: 450px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .about p {
+      color: #444;
+      font-size: 18px;
+      line-height: 1.5;
+    }
+    .about ol {
+      text-align: left;
+      padding-left: 25px;
+    }
+    .about li {
+      color: #444;
+      font-size: 18px;
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+    .faq {
+      max-width: 450px;
+      margin: 0 auto;
+      padding: 0 20px;
+      text-align: left;
+    }
+    .faq details {
+      background-color: white;
+      border-radius: 10px;
+      padding: 12px 15px;
+      margin-bottom: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+    }
+    .faq summary {
+      font-weight: bold;
+      color: #7a0c1a;
+      font-size: 18px;
+    }
+    .faq p {
+      color: #444;
+      font-size: 17px;
+      line-height: 1.5;
+      margin: 10px 0 0 0;
+    }
+    .contact {
+      background-color: #7a0c1a;
+      margin-top: 50px;
+      padding: 40px 20px;
+    }
+    .contact h2 {
+      color: #ffc72c;
+      margin: 0 0 15px 0;
+    }
+    .contact p {
+      color: white;
+      font-size: 20px;
+      margin: 10px 0;
+    }
+    .contact a {
+      color: #ffc72c;
+    }
+    .contact .order-btn {
+      color: white;
+    }
+    .footer {
+      background-color: #4f0811;
+      padding: 30px 20px;
+    }
+    .footer p {
+      color: white;
+      font-size: 15px;
+      margin: 10px 0;
+    }
+    .footer a {
+      color: #ffc72c;
+      font-weight: bold;
+      text-decoration: none;
+      margin: 0 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="nav">
+    <a href="#menu">Menu</a>
+    <a href="#how">How to Order</a>
+    <a href="#delivery">Delivery</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <div class="top">
+    <h1>Welcome to Grace's Kitchen</h1>
+    <p>Authentic Nigerian food in Kerry.</p>
+    <p>We provide and deliver delicious meals.</p>
+    <p>Open monday to sunday, 5am to 10pm</p>
+    <img class="hero" src="hero.jpg" alt="Delicious Nigerian food from Grace's Kitchen" onerror="this.style.display='none'">
+    <a class="order-btn" href="https://wa.me/353899477837?text=Hello%20Grace%27s%20Kitchen%2C%20I%20would%20like%20to%20place%20an%20order." target="_blank">Order on WhatsApp</a>
+  </div>
+
+  <h2 id="menu">Rice and Porridge</h2>
+  <p class="note">€120 per cooler</p>
+  <p class="allergy">May contain: celery, soya, fish, crustaceans (crayfish).</p>
+
+  <div class="dish">
+    <img src="jollof-rice.jpg" alt="Jollof Rice" onerror="this.style.display='none'">
+    <h3>Jollof Rice</h3>
+    <p>Smoky, spicy rice cooked in rich tomato sauce.</p>
+  </div>
+
+  <div class="dish">
+    <img src="fried-rice.jpg" alt="Fried Rice" onerror="this.style.display='none'">
+    <h3>Fried Rice</h3>
+    <p>Colourful rice stir-fried with vegetables.</p>
+  </div>
+
+  <div class="dish">
+    <img src="coconut-rice.jpg" alt="Coconut Rice" onerror="this.style.display='none'">
+    <h3>Coconut Rice</h3>
+    <p>Fragrant rice cooked in creamy coconut.</p>
+  </div>
+
+  <div class="dish">
+    <img src="yam-porridge.jpg" alt="Yam Porridge" onerror="this.style.display='none'">
+    <h3>Yam Porridge</h3>
+    <p>Soft yam cooked in a rich, spicy sauce.</p>
+  </div>
+
+  <h2>Soups and Stew</h2>
+  <p class="note">Small pot (20 pieces of meat): €50</p>
+  <p class="note">Large pot (40 pieces of meat): €80</p>
+  <p>The price depends on the meat inside.</p>
+  <p class="allergy">May contain: fish, crustaceans (crayfish).</p>
+
+  <div class="dish">
+    <img src="eforiro.jpg" alt="Eforiro" onerror="this.style.display='none'">
+    <h3>Eforiro</h3>
+    <p>Hearty vegetable soup full of flavour.</p>
+  </div>
+
+  <div class="dish">
+    <img src="egusi.jpg" alt="Egusi" onerror="this.style.display='none'">
+    <h3>Egusi</h3>
+    <p>Melon seed soup with leafy greens.</p>
+  </div>
+
+  <div class="dish">
+    <img src="ogbono.jpg" alt="Ogbono" onerror="this.style.display='none'">
+    <h3>Ogbono</h3>
+    <p>Thick, smooth soup made from ogbono seeds.</p>
+  </div>
+
+  <div class="dish">
+    <img src="okro-soup.jpg" alt="Okro Soup" onerror="this.style.display='none'">
+    <h3>Okro Soup</h3>
+    <p>Fresh okro soup, light and tasty.</p>
+  </div>
+
+  <div class="dish">
+    <img src="meat-stew.jpg" alt="Meat Stew" onerror="this.style.display='none'">
+    <h3>Meat Stew</h3>
+    <p>Rich tomato stew with tender meat.</p>
+  </div>
+
+  <h2>Choose Your Meat</h2>
+
+  <div class="about">
+    <p>Tell us which meat you would like in your food. Call or message us and say which one you want.</p>
+  </div>
+
+  <div class="chips">
+    <span>Beef</span>
+    <span>Turkey</span>
+    <span>Chicken</span>
+    <span>Chicken Wings</span>
+    <span>Chicken Legs</span>
+    <span>Fish</span>
+    <span>Shaki (tripe)</span>
+    <span>Pomo (cow skin)</span>
+    <span>Egg</span>
+  </div>
+
+  <h2>Small Chops</h2>
+  <p class="allergy">May contain: gluten (wheat flour), eggs, milk.</p>
+
+  <div class="dish">
+    <img src="puff-puff.jpg" alt="Puff Puff" onerror="this.style.display='none'">
+    <h3>Puff Puff</h3>
+    <p>Soft, golden, sweet fried dough balls.</p>
+    <p class="price">Cooler: €70</p>
+    <p class="price">Half cooler: €30</p>
+  </div>
+
+  <div class="dish">
+    <img src="meat-pie.jpg" alt="Meat Pie" onerror="this.style.display='none'">
+    <h3>Meat Pie</h3>
+    <p>Flaky pastry filled with seasoned meat.</p>
+    <p class="price">Medium: €2 each</p>
+    <p class="price">Large: €3 each</p>
+  </div>
+
+  <h2>Cakes</h2>
+  <p class="allergy">May contain: gluten (wheat flour), eggs, milk.</p>
+
+  <div class="dish">
+    <img src="butter-cake.jpg" alt="Butter Icing Cake" onerror="this.style.display='none'">
+    <h3>Butter Icing Cake</h3>
+    <p class="price">One tier: €80</p>
+    <p class="price">Two tiers: €120</p>
+  </div>
+
+  <div class="dish">
+    <img src="fondant-cake.jpg" alt="Fondant Cake" onerror="this.style.display='none'">
+    <h3>Fondant Cake</h3>
+    <p class="price">One tier: €100</p>
+    <p class="price">Two tiers: €150</p>
+  </div>
+
+  <div class="allergy-box">
+    <h2>Allergy Information</h2>
+    <p>Please tell us about any food allergy <strong>before you order</strong>.</p>
+    <p>All our food is made in the same kitchen, so any dish may contain traces of fish, crustaceans, gluten, eggs and milk.</p>
+  </div>
+
+  <h2>Party and Event Orders</h2>
+
+  <div class="about">
+    <p>Planning a birthday, wedding, naming ceremony or church event? Message us on WhatsApp with the date and number of guests and we will help you plan the food.</p>
+  </div>
+
+  <h2 id="how">How to Order</h2>
+
+  <div class="about">
+    <ol>
+      <li>Tap the green <strong>Order on WhatsApp</strong> button.</li>
+      <li>Tell us what you would like, which meat you want, how much, and the day you need it.</li>
+      <li>We will confirm what is available and the price.</li>
+      <li>We agree delivery or collection, and payment, with you on WhatsApp.</li>
+      <li>Enjoy your food!</li>
+    </ol>
+    <p>Open Tuesday to Friday, 12pm to 5pm. Message us to check what is available on the day you need.</p>
+  </div>
+
+  <h2 id="delivery">Delivery and Collection</h2>
+
+  <div class="about">
+    <p><strong>Delivery:</strong> We deliver in Kerry and the surrounding areas, depending on distance. Message us your location and we will confirm if we can deliver to you.</p>
+    <p><strong>Collection:</strong> You are welcome to collect your order. We will send you the collection address on WhatsApp.</p>
+  </div>
+
+  <h2>Payment</h2>
+
+  <div class="about">
+    <p>You can pay by <strong>cash</strong>, <strong>bank transfer</strong> or <strong>Revolut</strong>. We will give you the payment details when we confirm your order on WhatsApp.</p>
+  </div>
+
+  <h2>Customer Feedback</h2>
+
+  <div class="about">
+    <p>Have you eaten our food? We would love to hear from you. Send us your feedback on WhatsApp.</p>
+    <a class="order-btn" href="https://wa.me/353899477837?text=Hello%20Grace%27s%20Kitchen%2C%20I%20would%20like%20to%20share%20my%20feedback." target="_blank">Send Feedback</a>
+  </div>
+
+  <h2 id="faq">Frequently Asked Questions</h2>
+
+  <div class="faq">
+    <details>
+      <summary>Do you deliver?</summary>
+      <p>Yes, we deliver in Kerry and the surrounding areas, depending on distance. Message us your location and we will confirm if we can deliver to you. You can also collect your order.</p>
+    </details>
+    <details>
+      <summary>What are your opening hours?</summary>
+      <p>We are open Tuesday to Friday, 12pm to 5pm.</p>
+    </details>
+    <details>
+      <summary>How do I place an order?</summary>
+      <p>Tap the green Order on WhatsApp button. Tell us what you would like and the day you need it.</p>
+    </details>
+    <details>
+      <summary>Can I choose my meat?</summary>
+      <p>Yes. You can choose beef, turkey, chicken, chicken wings, chicken legs, fish, shaki (tripe), pomo (cow skin) or egg. Call or message us and say which one you want.</p>
+    </details>
+    <details>
+      <summary>How do I pay?</summary>
+      <p>You can pay by cash, bank transfer or Revolut. We will give you the payment details when we confirm your order on WhatsApp.</p>
+    </details>
+    <details>
+      <summary>I have a food allergy. What should I do?</summary>
+      <p>Please tell us before you order. All our food is made in the same kitchen, so any dish may contain traces of fish, crustaceans, gluten, eggs and milk.</p>
+    </details>
+    <details>
+      <summary>Can I order a cake?</summary>
+      <p>Yes. Message us the size, the icing you would like (butter icing or fondant) and the date you need it.</p>
+    </details>
+  </div>
+
+  <h2 id="about">About Us</h2>
+
+  <div class="about">
+    <p>Grace's Kitchen is a Nigerian food business in Kerry. We cook traditional Nigerian meals, small chops and cakes, and we deliver to your door.</p>
+    <p>Send us a message on WhatsApp to place your order.</p>
+  </div>
+
+  <h2 id="privacy">Privacy</h2>
+
+  <div class="about">
+    <p>This website does not collect any information about you. When you order on WhatsApp, we only use your name, phone number and delivery details to prepare and deliver your order. We do not sell or share them.</p>
+  </div>
+
+  <div class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <p>Call or message us on WhatsApp:</p>
+    <p><a href="tel:+353899477837">+353 89 947 7837</a></p>
+    <p>Open Tuesday to Friday, 12pm to 5pm</p>
+    <p>Kerry, Ireland</p>
+    <a class="order-btn" href="https://wa.me/353899477837?text=Hello%20Grace%27s%20Kitchen%2C%20I%20would%20like%20to%20place%20an%20order." target="_blank">Order on WhatsApp</a>
+  </div>
+
+  <div class="footer">
+    <p>
+      <a href="#menu">Menu</a>
+      <a href="#how">How to Order</a>
+      <a href="#delivery">Delivery</a>
+      <a href="#faq">FAQ</a>
+      <a href="#privacy">Privacy</a>
+    </p>
+    <p>
+      <a href="https://wa.me/353899477837" target="_blank">WhatsApp</a>
+      <!-- Add social media links here later, for example: -->
+      <!-- <a href="https://www.facebook.com/YOUR-PAGE" target="_blank">Facebook</a> -->
+      <!-- <a href="https://www.instagram.com/YOUR-PAGE" target="_blank">Instagram</a> -->
+    </p>
+    <p>© Grace's Kitchen, Kerry, Ireland</p>
+  </div>
+
+</body>
+</html>
