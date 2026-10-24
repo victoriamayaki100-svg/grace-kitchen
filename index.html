@@ -69,6 +69,11 @@
       text-decoration: none;
       margin-top: 20px;
     }
+    button.order-btn {
+      border: none;
+      font-family: Arial, sans-serif;
+      cursor: pointer;
+    }
     h2 {
       color: #7a0c1a;
       margin-top: 40px;
@@ -166,6 +171,94 @@
       line-height: 1.5;
       margin-bottom: 10px;
     }
+    .orderform {
+      background-color: white;
+      border-radius: 12px;
+      max-width: 450px;
+      margin: 0 auto;
+      padding: 20px;
+      box-sizing: border-box;
+      text-align: left;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    .orderform h3 {
+      color: #7a0c1a;
+      margin: 25px 0 5px 0;
+    }
+    .orderform .onote {
+      color: #b8860b;
+      font-weight: bold;
+      margin: 0 0 10px 0;
+    }
+    .orderform .flabel {
+      display: block;
+      color: #444;
+      font-weight: bold;
+      font-size: 17px;
+      margin: 18px 0 6px 0;
+    }
+    .orderform input[type="text"],
+    .orderform select,
+    .orderform textarea {
+      width: 100%;
+      box-sizing: border-box;
+      font-size: 17px;
+      padding: 10px;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      font-family: Arial, sans-serif;
+    }
+    .orow {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #eee;
+      padding: 8px 0;
+    }
+    .orow label {
+      color: #444;
+      font-size: 17px;
+      flex: 1;
+      padding-right: 10px;
+    }
+    .orow input {
+      width: 70px;
+      font-size: 18px;
+      padding: 8px;
+      text-align: center;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+    }
+    .mchips label {
+      display: inline-block;
+      background-color: #fff8ee;
+      border: 2px solid #ffc72c;
+      border-radius: 20px;
+      padding: 8px 14px;
+      margin: 4px 4px 4px 0;
+      font-size: 16px;
+      color: #7a0c1a;
+      font-weight: bold;
+    }
+    .orderform pre {
+      background-color: #fff8ee;
+      border-radius: 8px;
+      padding: 12px;
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      white-space: pre-wrap;
+      color: #444;
+      margin: 0;
+    }
+    .error {
+      color: #c00000;
+      font-weight: bold;
+      font-size: 17px;
+      margin: 10px 0 0 0;
+    }
+    .orderform .center {
+      text-align: center;
+    }
     .faq {
       max-width: 450px;
       margin: 0 auto;
@@ -231,7 +324,7 @@
 
   <div class="nav">
     <a href="#menu">Menu</a>
-    <a href="#how">How to Order</a>
+    <a href="#order">Order</a>
     <a href="#delivery">Delivery</a>
     <a href="#faq">FAQ</a>
     <a href="#contact">Contact</a>
@@ -241,9 +334,9 @@
     <h1>Welcome to Grace's Kitchen</h1>
     <p>Authentic Nigerian food in Kerry.</p>
     <p>We provide and deliver delicious meals.</p>
-    <p>Open monday to sunday, 5am to 10pm</p>
+    <p>Open Monday to Sunday, 5am to 10pm</p>
     <img class="hero" src="hero.jpg" alt="Delicious Nigerian food from Grace's Kitchen" onerror="this.style.display='none'">
-    <a class="order-btn" href="https://wa.me/353899477837?text=Hello%20Grace%27s%20Kitchen%2C%20I%20would%20like%20to%20place%20an%20order." target="_blank">Order on WhatsApp</a>
+    <a class="order-btn" href="#order">Order Now</a>
   </div>
 
   <h2 id="menu">Rice and Porridge</h2>
@@ -313,7 +406,7 @@
   <h2>Choose Your Meat</h2>
 
   <div class="about">
-    <p>Tell us which meat you would like in your food. Call or message us and say which one you want.</p>
+    <p>Tell us which meat you would like in your food. You can choose it in the order form below.</p>
   </div>
 
   <div class="chips">
@@ -348,21 +441,22 @@
   </div>
 
   <h2>Cakes</h2>
+  <p class="note">Send us a picture of the cake you want, and we will agree the price with you.</p>
   <p class="allergy">May contain: gluten (wheat flour), eggs, milk.</p>
 
   <div class="dish">
     <img src="butter-cake.jpg" alt="Butter Icing Cake" onerror="this.style.display='none'">
     <h3>Butter Icing Cake</h3>
-    <p class="price">One tier: €80</p>
-    <p class="price">Two tiers: €120</p>
+    <p>The price depends on the size and the design.</p>
   </div>
 
   <div class="dish">
     <img src="fondant-cake.jpg" alt="Fondant Cake" onerror="this.style.display='none'">
     <h3>Fondant Cake</h3>
-    <p class="price">One tier: €100</p>
-    <p class="price">Two tiers: €150</p>
+    <p>The price depends on the size and the design.</p>
   </div>
+
+  <a class="order-btn" href="https://wa.me/353899477837?text=Hello%20Grace%27s%20Kitchen%2C%20I%20would%20like%20to%20order%20a%20cake.%20I%20will%20send%20a%20picture%20of%20the%20cake%20I%20want." target="_blank">Send Cake Picture on WhatsApp</a>
 
   <div class="allergy-box">
     <h2>Allergy Information</h2>
@@ -380,13 +474,57 @@
 
   <div class="about">
     <ol>
-      <li>Tap the green <strong>Order on WhatsApp</strong> button.</li>
-      <li>Tell us what you would like, which meat you want, how much, and the day you need it.</li>
-      <li>We will confirm what is available and the price.</li>
-      <li>We agree delivery or collection, and payment, with you on WhatsApp.</li>
+      <li>Go to <strong>Place Your Order</strong> below and type your name.</li>
+      <li>Choose the food you want and how many. Choose your meat.</li>
+      <li>Tap <strong>Send Order on WhatsApp</strong>. WhatsApp opens with your order already typed. Tap Send.</li>
+      <li>We confirm what is available and the price, and agree delivery or collection, and payment, with you.</li>
       <li>Enjoy your food!</li>
     </ol>
-    <p>Open Tuesday to Friday, 12pm to 5pm. Message us to check what is available on the day you need.</p>
+    <p>Open Monday to Sunday, 5am to 10pm.</p>
+  </div>
+
+  <h2 id="order">Place Your Order</h2>
+
+  <div class="orderform">
+    <label class="flabel" for="name">Your name</label>
+    <input type="text" id="name" oninput="update()">
+
+    <div id="items"></div>
+
+    <h3>Cake</h3>
+    <p class="onote">Cake prices are agreed with you. After WhatsApp opens, please send us a picture of the cake you want.</p>
+    <input type="text" id="cake" placeholder="Describe the cake, for example size and flavour" oninput="update()">
+
+    <h3>Choose your meat</h3>
+    <div class="mchips" id="meats"></div>
+
+    <label class="flabel" for="mode">Delivery or collection?</label>
+    <select id="mode" onchange="update()">
+      <option>Delivery</option>
+      <option>Collection</option>
+    </select>
+
+    <label class="flabel" for="area">Your area (for delivery)</label>
+    <input type="text" id="area" oninput="update()">
+
+    <label class="flabel" for="when">Day and time you need it</label>
+    <input type="text" id="when" oninput="update()">
+
+    <label class="flabel" for="allergy">Any food allergies?</label>
+    <input type="text" id="allergy" placeholder="None, or tell us" oninput="update()">
+
+    <label class="flabel" for="notes">Anything else?</label>
+    <textarea id="notes" rows="3" oninput="update()"></textarea>
+
+    <h3>Your order summary</h3>
+    <pre id="summary"></pre>
+
+    <p class="error" id="error"></p>
+
+    <div class="center">
+      <button type="button" class="order-btn" onclick="sendOrder()">Send Order on WhatsApp</button>
+      <p class="onote">You will see your message in WhatsApp first. Nothing is sent until you tap Send there.</p>
+    </div>
   </div>
 
   <h2 id="delivery">Delivery and Collection</h2>
@@ -418,15 +556,15 @@
     </details>
     <details>
       <summary>What are your opening hours?</summary>
-      <p>We are open Tuesday to Friday, 12pm to 5pm.</p>
+      <p>We are open Monday to Sunday, 5am to 10pm.</p>
     </details>
     <details>
       <summary>How do I place an order?</summary>
-      <p>Tap the green Order on WhatsApp button. Tell us what you would like and the day you need it.</p>
+      <p>Go to the Place Your Order section on this page. Choose your food and tap Send Order on WhatsApp. Or tap the WhatsApp button in the Contact section to chat with us.</p>
     </details>
     <details>
       <summary>Can I choose my meat?</summary>
-      <p>Yes. You can choose beef, turkey, chicken, chicken wings, chicken legs, fish, shaki (tripe), pomo (cow skin) or egg. Call or message us and say which one you want.</p>
+      <p>Yes. You can choose beef, turkey, chicken, chicken wings, chicken legs, fish, shaki (tripe), pomo (cow skin) or egg. Choose it in the order form, or call or message us.</p>
     </details>
     <details>
       <summary>How do I pay?</summary>
@@ -438,7 +576,7 @@
     </details>
     <details>
       <summary>Can I order a cake?</summary>
-      <p>Yes. Message us the size, the icing you would like (butter icing or fondant) and the date you need it.</p>
+      <p>Yes. Send us a picture of the cake you want on WhatsApp, and tell us the size and the date you need it. We will agree the price with you.</p>
     </details>
   </div>
 
@@ -459,15 +597,15 @@
     <h2>Contact Us</h2>
     <p>Call or message us on WhatsApp:</p>
     <p><a href="tel:+353899477837">+353 89 947 7837</a></p>
-    <p>Open Tuesday to Friday, 12pm to 5pm</p>
+    <p>Open Monday to Sunday, 5am to 10pm</p>
     <p>Kerry, Ireland</p>
-    <a class="order-btn" href="https://wa.me/353899477837?text=Hello%20Grace%27s%20Kitchen%2C%20I%20would%20like%20to%20place%20an%20order." target="_blank">Order on WhatsApp</a>
+    <a class="order-btn" href="https://wa.me/353899477837?text=Hello%20Grace%27s%20Kitchen%2C%20I%20would%20like%20to%20place%20an%20order." target="_blank">Chat on WhatsApp</a>
   </div>
 
   <div class="footer">
     <p>
       <a href="#menu">Menu</a>
-      <a href="#how">How to Order</a>
+      <a href="#order">Order</a>
       <a href="#delivery">Delivery</a>
       <a href="#faq">FAQ</a>
       <a href="#privacy">Privacy</a>
@@ -481,5 +619,142 @@
     <p>© Grace's Kitchen, Kerry, Ireland</p>
   </div>
 
+  <script>
+    var phone = "353899477837";
+
+    var groups = [
+      { title: "Rice and Porridge", note: "€120 per cooler", items: [
+        ["Jollof Rice", "cooler", 120],
+        ["Fried Rice", "cooler", 120],
+        ["Coconut Rice", "cooler", 120],
+        ["Yam Porridge", "cooler", 120]
+      ]},
+      { title: "Soups and Stew", note: "Small pot €50, large pot €80. The price depends on the meat inside.", items: [] },
+      { title: "Small Chops", note: "", items: [
+        ["Puff Puff", "cooler", 70],
+        ["Puff Puff", "half cooler", 30],
+        ["Meat Pie", "medium", 2],
+        ["Meat Pie", "large", 3]
+      ]}
+    ];
+
+    var soups = ["Eforiro", "Egusi", "Ogbono", "Okro Soup", "Meat Stew"];
+    for (var s = 0; s < soups.length; s++) {
+      groups[1].items.push([soups[s], "small pot", 50]);
+      groups[1].items.push([soups[s], "large pot", 80]);
+    }
+
+    var meats = ["Beef", "Turkey", "Chicken", "Chicken Wings", "Chicken Legs", "Fish", "Shaki (tripe)", "Pomo (cow skin)", "Egg"];
+
+    function buildForm() {
+      var html = "";
+      var id = 0;
+      for (var g = 0; g < groups.length; g++) {
+        html += "<h3>" + groups[g].title + "</h3>";
+        if (groups[g].note) {
+          html += '<p class="onote">' + groups[g].note + "</p>";
+        }
+        for (var i = 0; i < groups[g].items.length; i++) {
+          var it = groups[g].items[i];
+          html += '<div class="orow"><label for="q' + id + '">' + it[0] + " <small>(" + it[1] + ", €" + it[2] + ')</small></label><input type="number" inputmode="numeric" min="0" value="0" id="q' + id + '" oninput="update()"></div>';
+          id++;
+        }
+      }
+      document.getElementById("items").innerHTML = html;
+
+      var mh = "";
+      for (var m = 0; m < meats.length; m++) {
+        mh += '<label><input type="checkbox" value="' + meats[m] + '" onchange="update()"> ' + meats[m] + "</label>";
+      }
+      document.getElementById("meats").innerHTML = mh;
+    }
+
+    function getOrder() {
+      var lines = [];
+      var total = 0;
+      var id = 0;
+      for (var g = 0; g < groups.length; g++) {
+        for (var i = 0; i < groups[g].items.length; i++) {
+          var it = groups[g].items[i];
+          var q = parseInt(document.getElementById("q" + id).value, 10);
+          if (isNaN(q) || q < 0) { q = 0; }
+          if (q > 0) {
+            lines.push("- " + q + " x " + it[0] + " (" + it[1] + ")");
+            total += q * it[2];
+          }
+          id++;
+        }
+      }
+      return { lines: lines, total: total };
+    }
+
+    function getMeats() {
+      var boxes = document.querySelectorAll("#meats input");
+      var chosen = [];
+      for (var i = 0; i < boxes.length; i++) {
+        if (boxes[i].checked) { chosen.push(boxes[i].value); }
+      }
+      return chosen;
+    }
+
+    function buildMessage() {
+      var order = getOrder();
+      var name = document.getElementById("name").value.trim();
+      var cake = document.getElementById("cake").value.trim();
+      var area = document.getElementById("area").value.trim();
+      var when = document.getElementById("when").value.trim();
+      var allergy = document.getElementById("allergy").value.trim();
+      var notes = document.getElementById("notes").value.trim();
+      var mode = document.getElementById("mode").value;
+      var chosenMeats = getMeats();
+
+      var msg = "Hello Grace's Kitchen, I would like to place an order.\n";
+      if (name) { msg += "\nName: " + name; }
+      if (order.lines.length > 0) {
+        msg += "\n\nMy order:\n" + order.lines.join("\n");
+      } else if (!cake) {
+        msg += "\n\nMy order:\n(nothing chosen yet)";
+      }
+      if (chosenMeats.length > 0) { msg += "\n\nMeat: " + chosenMeats.join(", "); }
+      if (cake) {
+        msg += "\n\nCake: " + cake + "\n(Cake price to be agreed. I will send a picture of the cake.)";
+      }
+      msg += "\n\n" + mode;
+      if (area) { msg += " - area: " + area; }
+      if (when) { msg += "\nNeeded: " + when; }
+      if (allergy) { msg += "\nAllergies: " + allergy; }
+      if (notes) { msg += "\nNotes: " + notes; }
+      if (order.lines.length > 0) {
+        msg += "\n\nEstimated total: €" + order.total + " (final price to be confirmed)";
+      }
+      return msg;
+    }
+
+    function update() {
+      document.getElementById("summary").textContent = buildMessage();
+      document.getElementById("error").textContent = "";
+    }
+
+    function sendOrder() {
+      var order = getOrder();
+      var name = document.getElementById("name").value.trim();
+      var cake = document.getElementById("cake").value.trim();
+      var error = document.getElementById("error");
+      if (order.lines.length === 0 && !cake) {
+        error.textContent = "Please choose at least one item, or describe the cake you want.";
+        return;
+      }
+      if (!name) {
+        error.textContent = "Please type your name.";
+        return;
+      }
+      var url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(buildMessage());
+      window.location.href = url;
+    }
+
+    buildForm();
+    update();
+  </script>
+
 </body>
-</html>
+</html> 
