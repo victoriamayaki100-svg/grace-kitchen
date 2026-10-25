@@ -81,13 +81,40 @@
     .note {
       color: #b8860b;
       font-weight: bold;
-      font-size: 20px;
+      font-size: 19px;
+      line-height: 1.4;
       margin: 5px 20px 15px 20px;
     }
     .allergy {
       color: #7a0c1a;
       font-size: 16px;
       margin: 5px 20px 15px 20px;
+    }
+    .info {
+      color: #444;
+      font-size: 17px;
+      line-height: 1.5;
+      max-width: 450px;
+      margin: 5px auto 15px auto;
+      padding: 0 20px;
+    }
+    .pricebox {
+      background-color: #fff0c2;
+      border: 2px solid #ffc72c;
+      border-radius: 12px;
+      max-width: 400px;
+      margin: 30px auto 0 auto;
+      padding: 15px 20px;
+    }
+    .pricebox h2 {
+      margin: 0 0 10px 0;
+      font-size: 22px;
+    }
+    .pricebox p {
+      color: #444;
+      font-size: 17px;
+      line-height: 1.5;
+      margin: 8px 0;
     }
     .dish {
       background-color: white;
@@ -339,8 +366,15 @@
     <a class="order-btn" href="#order">Order Now</a>
   </div>
 
+  <div class="pricebox">
+    <h2>A Note About Prices</h2>
+    <p>There are no fixed prices for our soups, stew, rice and porridge. The price depends on how much assorted you want inside, such as prawns, pomo and different meats.</p>
+    <p>The price can be negotiated with us on WhatsApp. Food prices also change with the cost of ingredients.</p>
+  </div>
+
   <h2 id="menu">Rice and Porridge</h2>
-  <p class="note">€120 per cooler</p>
+  <p class="note">Sold by the cooler: half cooler or full cooler (20 litre).</p>
+  <p class="info">Plain jollof rice has nothing inside. If you want extras in your rice, such as prawns or liver, tell us. Extras make the price go up.</p>
   <p class="allergy">May contain: celery, soya, fish, crustaceans (crayfish).</p>
 
   <div class="dish">
@@ -367,10 +401,15 @@
     <p>Soft yam cooked in a rich, spicy sauce.</p>
   </div>
 
+  <div class="dish">
+    <img src="plantain.jpg" alt="Plantain" onerror="this.style.display='none'">
+    <h3>Plantain</h3>
+    <p>Sweet, golden fried plantain.</p>
+  </div>
+
   <h2>Soups and Stew</h2>
-  <p class="note">Small pot (20 pieces of meat): €50</p>
-  <p class="note">Large pot (40 pieces of meat): €80</p>
-  <p>The price depends on the meat inside.</p>
+  <p class="note">Sold by the pot: medium pot or large pot.</p>
+  <p class="info">The price depends on the meat inside.</p>
   <p class="allergy">May contain: fish, crustaceans (crayfish).</p>
 
   <div class="dish">
@@ -398,9 +437,49 @@
   </div>
 
   <div class="dish">
+    <img src="ayamase.jpg" alt="Ayamase" onerror="this.style.display='none'">
+    <h3>Ayamase</h3>
+    <p>Spicy green pepper stew.</p>
+  </div>
+
+  <div class="dish">
+    <img src="red-stew.jpg" alt="Red Stew" onerror="this.style.display='none'">
+    <h3>Red Stew</h3>
+    <p>Rich, spicy red pepper stew.</p>
+  </div>
+
+  <div class="dish">
     <img src="meat-stew.jpg" alt="Meat Stew" onerror="this.style.display='none'">
     <h3>Meat Stew</h3>
     <p>Rich tomato stew with tender meat.</p>
+  </div>
+
+  <h2>Swallow</h2>
+  <p class="note">Sold by the wrap: 1 wrap €3, 2 wraps €5.</p>
+  <p class="info">Order your swallow with any of our soups.</p>
+
+  <div class="dish">
+    <img src="pounded-yam.jpg" alt="Pounded Yam" onerror="this.style.display='none'">
+    <h3>Pounded Yam</h3>
+    <p>Smooth, soft pounded yam.</p>
+  </div>
+
+  <div class="dish">
+    <img src="amala.jpg" alt="Amala" onerror="this.style.display='none'">
+    <h3>Amala</h3>
+    <p>Soft, dark amala.</p>
+  </div>
+
+  <div class="dish">
+    <img src="semo.jpg" alt="Semo" onerror="this.style.display='none'">
+    <h3>Semo</h3>
+    <p>Smooth semolina swallow.</p>
+  </div>
+
+  <div class="dish">
+    <img src="eba.jpg" alt="Eba" onerror="this.style.display='none'">
+    <h3>Eba</h3>
+    <p>Soft eba made from garri.</p>
   </div>
 
   <h2>Choose Your Meat</h2>
@@ -419,25 +498,65 @@
     <span>Shaki (tripe)</span>
     <span>Pomo (cow skin)</span>
     <span>Egg</span>
+    <span>Assorted (a mix of all the meats)</span>
+  </div>
+
+  <h2>Pepper and Grilled</h2>
+  <p class="allergy">May contain: fish, crustaceans (crayfish).</p>
+
+  <div class="dish">
+    <img src="pepper-gizzard.jpg" alt="Pepper Gizzard" onerror="this.style.display='none'">
+    <h3>Pepper Gizzard</h3>
+    <p>Spicy, tasty chicken gizzard.</p>
+    <p class="price">Tray: €60</p>
+  </div>
+
+  <div class="dish">
+    <img src="grilled-chicken.jpg" alt="Grilled Pepper Chicken" onerror="this.style.display='none'">
+    <h3>Grilled Pepper Chicken</h3>
+    <p>Chicken grilled with pepper.</p>
+    <p>Sold by the piece.</p>
+  </div>
+
+  <div class="dish">
+    <img src="pepper-meat.jpg" alt="Pepper Meat" onerror="this.style.display='none'">
+    <h3>Pepper Meat</h3>
+    <p>Tender meat in a spicy pepper sauce.</p>
+    <p>Sold by the piece.</p>
   </div>
 
   <h2>Small Chops</h2>
-  <p class="allergy">May contain: gluten (wheat flour), eggs, milk.</p>
+  <p class="allergy">May contain: gluten (wheat flour), eggs, milk, fish.</p>
 
   <div class="dish">
     <img src="puff-puff.jpg" alt="Puff Puff" onerror="this.style.display='none'">
     <h3>Puff Puff</h3>
     <p>Soft, golden, sweet fried dough balls.</p>
-    <p class="price">Cooler: €70</p>
-    <p class="price">Half cooler: €30</p>
+    <p>Sold by the cooler: half cooler or full cooler.</p>
   </div>
 
   <div class="dish">
     <img src="meat-pie.jpg" alt="Meat Pie" onerror="this.style.display='none'">
     <h3>Meat Pie</h3>
     <p>Flaky pastry filled with seasoned meat.</p>
-    <p class="price">Medium: €2 each</p>
-    <p class="price">Large: €3 each</p>
+    <p>Sold one by one: medium or large.</p>
+  </div>
+
+  <div class="dish">
+    <img src="moi-moi.jpg" alt="Moi Moi" onerror="this.style.display='none'">
+    <h3>Moi Moi</h3>
+    <p>Steamed bean pudding.</p>
+    <p class="price">Plain: €2 each</p>
+    <p class="price">With fish and egg: €3 each</p>
+  </div>
+
+  <div class="dish">
+    <img src="chin-chin.jpg" alt="Chin Chin" onerror="this.style.display='none'">
+    <h3>Chin Chin</h3>
+    <p>Crunchy, sweet fried snack.</p>
+    <p class="price">Small take-away pack: €2</p>
+    <p class="price">5 litre bucket: €25</p>
+    <p>10 litre bucket: ask us for the price.</p>
   </div>
 
   <h2>Cakes</h2>
@@ -475,7 +594,7 @@
   <div class="about">
     <ol>
       <li>Go to <strong>Place Your Order</strong> below and type your name.</li>
-      <li>Choose the food you want and how many. Choose your meat.</li>
+      <li>Choose the food you want and how much. Choose your meat and any extras.</li>
       <li>Tap <strong>Send Order on WhatsApp</strong>. WhatsApp opens with your order already typed. Tap Send.</li>
       <li>We confirm what is available and the price, and agree delivery or collection, and payment, with you.</li>
       <li>Enjoy your food!</li>
@@ -490,6 +609,10 @@
     <input type="text" id="name" oninput="update()">
 
     <div id="items"></div>
+
+    <h3>Extras in your food</h3>
+    <p class="onote">Extras such as prawns, pomo or liver make the price go up.</p>
+    <input type="text" id="extras" placeholder="For example: prawns in the fried rice" oninput="update()">
 
     <h3>Cake</h3>
     <p class="onote">Cake prices are agreed with you. After WhatsApp opens, please send us a picture of the cake you want.</p>
@@ -551,6 +674,14 @@
 
   <div class="faq">
     <details>
+      <summary>How much does the food cost?</summary>
+      <p>Small items like swallow, moi moi, chin chin and pepper gizzard have the prices shown on this page. For soups, stew, rice and porridge, there is no fixed price. The price depends on how much assorted you want inside, such as prawns, pomo and different meats, and it can be negotiated with us on WhatsApp. Food prices also change with the cost of ingredients, so we confirm the price with you before you pay.</p>
+    </details>
+    <details>
+      <summary>How is the food sold?</summary>
+      <p>Rice, yam porridge and plantain are sold by the cooler (half cooler or full cooler). Soups and stew are sold by the pot (medium pot or large pot). Swallow, such as pounded yam, amala, semo and eba, is sold by the wrap. Pepper gizzard is sold by the tray. Meat pies and moi moi are sold one by one. Chin chin is sold in a small take-away pack or a bucket.</p>
+    </details>
+    <details>
       <summary>Do you deliver?</summary>
       <p>Yes, we deliver in Kerry and the surrounding areas, depending on distance. Message us your location and we will confirm if we can deliver to you. You can also collect your order.</p>
     </details>
@@ -564,7 +695,7 @@
     </details>
     <details>
       <summary>Can I choose my meat?</summary>
-      <p>Yes. You can choose beef, turkey, chicken, chicken wings, chicken legs, fish, shaki (tripe), pomo (cow skin) or egg. Choose it in the order form, or call or message us.</p>
+      <p>Yes. You can choose beef, turkey, chicken, chicken wings, chicken legs, fish, shaki (tripe), pomo (cow skin), egg or assorted (a mix of all the meats). Choose it in the order form, or call or message us.</p>
     </details>
     <details>
       <summary>How do I pay?</summary>
@@ -591,6 +722,12 @@
 
   <div class="about">
     <p>This website does not collect any information about you. When you order on WhatsApp, we only use your name, phone number and delivery details to prepare and deliver your order. We do not sell or share them.</p>
+  </div>
+
+  <div class="pricebox">
+    <h2>A Note About Prices</h2>
+    <p>There are no fixed prices for our soups, stew, rice and porridge. The price depends on how much assorted you want inside, such as prawns, pomo and different meats.</p>
+    <p>The price can be negotiated with us on WhatsApp. Food prices also change with the cost of ingredients.</p>
   </div>
 
   <div class="contact" id="contact">
@@ -623,28 +760,50 @@
     var phone = "353899477837";
 
     var groups = [
-      { title: "Rice and Porridge", note: "€120 per cooler", items: [
-        ["Jollof Rice", "cooler", 120],
-        ["Fried Rice", "cooler", 120],
-        ["Coconut Rice", "cooler", 120],
-        ["Yam Porridge", "cooler", 120]
+      { title: "Rice and Porridge", note: "Half cooler or full cooler (20 litre)", items: [
+        ["Jollof Rice", "half cooler"],
+        ["Jollof Rice", "full cooler"],
+        ["Fried Rice", "half cooler"],
+        ["Fried Rice", "full cooler"],
+        ["Coconut Rice", "half cooler"],
+        ["Coconut Rice", "full cooler"],
+        ["Yam Porridge", "half cooler"],
+        ["Yam Porridge", "full cooler"],
+        ["Plantain", "half cooler"],
+        ["Plantain", "full cooler"]
       ]},
-      { title: "Soups and Stew", note: "Small pot €50, large pot €80. The price depends on the meat inside.", items: [] },
+      { title: "Soups and Stew", note: "Medium pot or large pot", items: [] },
+      { title: "Swallow", note: "Sold by the wrap: 1 wrap €3, 2 wraps €5", items: [
+        ["Pounded Yam", "wrap"],
+        ["Amala", "wrap"],
+        ["Semo", "wrap"],
+        ["Eba", "wrap"]
+      ]},
+      { title: "Pepper and Grilled", note: "", items: [
+        ["Pepper Gizzard", "tray, €60"],
+        ["Grilled Pepper Chicken", "piece"],
+        ["Pepper Meat", "piece"]
+      ]},
       { title: "Small Chops", note: "", items: [
-        ["Puff Puff", "cooler", 70],
-        ["Puff Puff", "half cooler", 30],
-        ["Meat Pie", "medium", 2],
-        ["Meat Pie", "large", 3]
+        ["Puff Puff", "half cooler"],
+        ["Puff Puff", "full cooler"],
+        ["Meat Pie", "medium"],
+        ["Meat Pie", "large"],
+        ["Moi Moi", "plain, €2"],
+        ["Moi Moi", "with fish and egg, €3"],
+        ["Chin Chin", "small take-away pack, €2"],
+        ["Chin Chin", "5 litre bucket, €25"],
+        ["Chin Chin", "10 litre bucket"]
       ]}
     ];
 
-    var soups = ["Eforiro", "Egusi", "Ogbono", "Okro Soup", "Meat Stew"];
+    var soups = ["Eforiro", "Egusi", "Ogbono", "Okro Soup", "Ayamase", "Red Stew", "Meat Stew"];
     for (var s = 0; s < soups.length; s++) {
-      groups[1].items.push([soups[s], "small pot", 50]);
-      groups[1].items.push([soups[s], "large pot", 80]);
+      groups[1].items.push([soups[s], "medium pot"]);
+      groups[1].items.push([soups[s], "large pot"]);
     }
 
-    var meats = ["Beef", "Turkey", "Chicken", "Chicken Wings", "Chicken Legs", "Fish", "Shaki (tripe)", "Pomo (cow skin)", "Egg"];
+    var meats = ["Beef", "Turkey", "Chicken", "Chicken Wings", "Chicken Legs", "Fish", "Shaki (tripe)", "Pomo (cow skin)", "Egg", "Assorted (a mix of all the meats)"];
 
     function buildForm() {
       var html = "";
@@ -656,7 +815,7 @@
         }
         for (var i = 0; i < groups[g].items.length; i++) {
           var it = groups[g].items[i];
-          html += '<div class="orow"><label for="q' + id + '">' + it[0] + " <small>(" + it[1] + ", €" + it[2] + ')</small></label><input type="number" inputmode="numeric" min="0" value="0" id="q' + id + '" oninput="update()"></div>';
+          html += '<div class="orow"><label for="q' + id + '">' + it[0] + " <small>(" + it[1] + ')</small></label><input type="number" inputmode="numeric" min="0" value="0" id="q' + id + '" oninput="update()"></div>';
           id++;
         }
       }
@@ -671,7 +830,6 @@
 
     function getOrder() {
       var lines = [];
-      var total = 0;
       var id = 0;
       for (var g = 0; g < groups.length; g++) {
         for (var i = 0; i < groups[g].items.length; i++) {
@@ -680,12 +838,11 @@
           if (isNaN(q) || q < 0) { q = 0; }
           if (q > 0) {
             lines.push("- " + q + " x " + it[0] + " (" + it[1] + ")");
-            total += q * it[2];
           }
           id++;
         }
       }
-      return { lines: lines, total: total };
+      return { lines: lines };
     }
 
     function getMeats() {
@@ -700,6 +857,7 @@
     function buildMessage() {
       var order = getOrder();
       var name = document.getElementById("name").value.trim();
+      var extras = document.getElementById("extras").value.trim();
       var cake = document.getElementById("cake").value.trim();
       var area = document.getElementById("area").value.trim();
       var when = document.getElementById("when").value.trim();
@@ -716,17 +874,16 @@
         msg += "\n\nMy order:\n(nothing chosen yet)";
       }
       if (chosenMeats.length > 0) { msg += "\n\nMeat: " + chosenMeats.join(", "); }
+      if (extras) { msg += "\nExtras: " + extras; }
       if (cake) {
-        msg += "\n\nCake: " + cake + "\n(Cake price to be agreed. I will send a picture of the cake.)";
+        msg += "\n\nCake: " + cake + "\n(I will send a picture of the cake.)";
       }
       msg += "\n\n" + mode;
       if (area) { msg += " - area: " + area; }
       if (when) { msg += "\nNeeded: " + when; }
       if (allergy) { msg += "\nAllergies: " + allergy; }
       if (notes) { msg += "\nNotes: " + notes; }
-      if (order.lines.length > 0) {
-        msg += "\n\nEstimated total: €" + order.total + " (final price to be confirmed)";
-      }
+      msg += "\n\nPlease confirm the price.";
       return msg;
     }
 
